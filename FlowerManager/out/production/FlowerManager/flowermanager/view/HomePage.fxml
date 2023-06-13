@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="699.0" prefWidth="1337.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="flowermanager.controller.HomePageController">
+   <children>
+      <StackPane layoutX="18.0" layoutY="31.0" prefHeight="484.0" prefWidth="176.0">
+         <children>
+            <AnchorPane prefHeight="484.0" prefWidth="206.0">
+               <children>
+                  <Label fx:id="lbWelcome" layoutX="58.0" layoutY="36.0" prefHeight="70.0" prefWidth="127.0" text="Welcome ">
+                     <font>
+                        <Font name="Cambria Italic" size="16.0" />
+                     </font>
+                  </Label>
+                  <AnchorPane layoutX="14.0" layoutY="187.0" prefHeight="49.0" prefWidth="190.0">
+                     <children>
+                        <ImageView fx:id="adminImage" fitHeight="126.0" fitWidth="127.0" layoutX="47.0" layoutY="-82.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </StackPane>
+      <AnchorPane layoutX="201.0" layoutY="18.0" prefHeight="502.0" prefWidth="595.0">
+         <children>
+            <AnchorPane layoutX="17.0" layoutY="452.0" prefHeight="176.0" prefWidth="970.0">
+               <children>
+                  <BarChart fx:id="home_chart" layoutX="48.0" layoutY="-222.0" prefHeight="375.0" prefWidth="922.0" title="Income every day ">
+                    <xAxis>
+                      <CategoryAxis side="BOTTOM" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis side="LEFT" />
+                    </yAxis>
+                  </BarChart>
+                  <VBox layoutX="-151.0" layoutY="-122.0" prefHeight="257.0" prefWidth="138.0" spacing="10.0">
+                     <children>
+                        <Button focusTraversable="false" mnemonicParsing="false" prefHeight="42.0" prefWidth="127.0" text="Homepage">
+                           <font>
+                              <Font name="Bookman Old Style" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btnFlower" focusTraversable="false" mnemonicParsing="false" onAction="#moveFlowerForm" prefHeight="42.0" prefWidth="127.0" text="Available Flowers">
+                           <font>
+                              <Font name="Bookman Old Style" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btnPurchase" focusTraversable="false" mnemonicParsing="false" onAction="#movePurchaseForm" prefHeight="42.0" prefWidth="127.0" text="Purchase">
+                           <font>
+                              <Font name="Bookman Old Style" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="returnFlower" focusTraversable="false" mnemonicParsing="false" onAction="#moveReturnForm" prefHeight="42.0" prefWidth="127.0" text="Return Flower">
+                           <font>
+                              <Font name="Bookman Old Style" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btnLogout" mnemonicParsing="false" onAction="#logout" prefHeight="42.0" prefWidth="127.0" text="Logout">
+                           <font>
+                              <Font name="Bookman Old Style" size="12.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+            <HBox layoutX="63.0" layoutY="10.0" prefHeight="203.0" prefWidth="912.0">
+               <children>
+                  <AnchorPane prefHeight="210.0" prefWidth="286.0">
+                     <children>
+                        <Label layoutX="14.0" layoutY="3.0" prefHeight="114.0" prefWidth="271.0" text="Avalable Flower">
+                           <font>
+                              <Font name="Century" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lbFlower" layoutX="14.0" layoutY="117.0" prefHeight="94.0" prefWidth="230.0" text="Total : ">
+                           <font>
+                              <Font name="Century" size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="210.0" prefWidth="321.0">
+                     <children>
+                        <Label prefHeight="114.0" prefWidth="315.0" text="Revenu">
+                           <font>
+                              <Font name="Century" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lbRevenu" layoutY="114.0" prefHeight="94.0" prefWidth="166.0" text="Total : ">
+                           <font>
+                              <Font name="Century" size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="210.0" prefWidth="302.0">
+                     <children>
+                        <Label fx:id="lbCustomer" layoutY="115.0" prefHeight="94.0" prefWidth="302.0" text="Total : ">
+                           <font>
+                              <Font name="Century" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="-2.0" layoutY="-5.0" prefHeight="126.0" prefWidth="302.0" text="Customers">
+                           <font>
+                              <Font name="Century" size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

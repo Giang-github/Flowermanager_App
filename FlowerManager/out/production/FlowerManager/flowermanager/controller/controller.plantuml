@@ -1,0 +1,208 @@
+@startuml
+
+title __CONTROLLER's Class Diagram__\n
+
+  namespace flowermanager {
+    namespace controller {
+      class flowermanager.controller.FlowerManagerController {
+          ~ items : ObservableList<String>
+          - adminImage : ImageView
+          - availableFlowers_addBtn : Button
+          - availableFlowers_clearBtn : Button
+          - availableFlowers_col_flowerID : TableColumn<Flower, String>
+          - availableFlowers_col_flowerName : TableColumn<Flower, String>
+          - availableFlowers_col_price : TableColumn<Flower, String>
+          - availableFlowers_col_status : TableColumn<Flower, String>
+          - availableFlowers_deleteBtn : Button
+          - availableFlowers_flowerName : TextField
+          - availableFlowers_form : AnchorPane
+          - availableFlowers_imageView : ImageView
+          - availableFlowers_importBtn : Button
+          - availableFlowers_price : TextField
+          - availableFlowers_search : TextField
+          - availableFlowers_status : ComboBox<String>
+          - availableFlowers_tableView : TableView<Flower>
+          - availableFlowers_updateBtn : Button
+          - btnHomepage : Button
+          - btnPurchase : Button
+          - connect : Connection
+          - flowersList : ObservableList<Flower>
+          - image : Image
+          - lbWelcome : Label
+          - main_form : AnchorPane
+          - prepare : PreparedStatement
+          - result : ResultSet
+          + availableFlowersAdd()
+          + availableFlowersClear()
+          + availableFlowersDelete()
+          + availableFlowersInitialize()
+          + availableFlowersInsertImage()
+          + availableFlowersSearch()
+          + availableFlowersSelect()
+          + availableFlowersShowListData()
+          + availableFlowersUpdate()
+          + initialize()
+          + moveHomepage()
+          + movePurchaseForm()
+      }
+    }
+  }
+  
+
+  namespace flowermanager {
+    namespace controller {
+      class flowermanager.controller.HomePageController {
+          - adminImage : ImageView
+          - btnFlower : Button
+          - btnLogout : Button
+          - btnPurchase : Button
+          - connect : Connection
+          - home_chart : BarChart<String, Double>
+          - lbCustomer : Label
+          - lbFlower : Label
+          - lbRevenu : Label
+          - lbWelcome : Label
+          - prepare : PreparedStatement
+          - result : ResultSet
+          - returnFlower : Button
+          + homeAvailableFlower()
+          + homeChart()
+          + homeCustomer()
+          + homeRevenu()
+          + initialize()
+          + logout()
+          + moveFlowerForm()
+          + movePurchaseForm()
+          + moveReturnForm()
+      }
+    }
+  }
+  
+
+  namespace flowermanager {
+    namespace controller {
+      class flowermanager.controller.LoginController {
+          - connect : Connection
+          - loginBtn : Button
+          - loginForm : AnchorPane
+          - password : PasswordField
+          - prepare : PreparedStatement
+          - rbShowpassWord : CheckBox
+          - result : ResultSet
+          - username : TextField
+          + close()
+          + getPane()
+          + handleCheckBox()
+          + initialize()
+          - login()
+      }
+    }
+  }
+  
+
+  namespace flowermanager {
+    namespace controller {
+      class flowermanager.controller.OrderController {
+          ~ image : Image
+          ~ path : Path
+          - PATH : String
+          - adminImage : ImageView
+          - btnFlower : Button
+          - btnHomepage : Button
+          - btnPrintOrder : Button
+          - btnRemove : Button
+          - clOrderId : TableColumn<Order, Integer>
+          - cl_customerId : TableColumn<Order, String>
+          - connect : Connection
+          - customerId : int
+          - imgFlower : ImageView
+          - lbWelcome : Label
+          - prepare : PreparedStatement
+          - purchaseListD : ObservableList<Order>
+          - purchase_addCart : Button
+          - purchase_col_flowerID : TableColumn<Order, String>
+          - purchase_col_flowerName : TableColumn<Order, String>
+          - purchase_col_price : TableColumn<Order, String>
+          - purchase_col_quantity : TableColumn<Order, String>
+          - purchase_flowerID : ComboBox<Integer>
+          - purchase_form : AnchorPane
+          - purchase_payBtn : Button
+          - purchase_quantity : Spinner<Integer>
+          - purchase_tableView : TableView<Order>
+          - purchase_total : Label
+          - qty : int
+          - result : ResultSet
+          - spinner : SpinnerValueFactory<Integer>
+          - totalP : double
+          - txtFlowerName : TextField
+          + initialize()
+          + moveFlowerForm()
+          + moveHomepageForm()
+          + printOrder()
+          + purchaseAddToCart()
+          + purchaseCustomerId()
+          + purchaseDisplayTotal()
+          + purchaseFlowerId()
+          + purchaseFlowerNameAndImage()
+          + purchaseListData()
+          + purchasePay()
+          + purchaseQuantity()
+          + purchaseShowListData()
+          + purchaseSpinner()
+          + removeItem()
+          - clear()
+      }
+    }
+  }
+  
+
+  namespace flowermanager {
+    namespace controller {
+      class flowermanager.controller.ReturnFormController {
+          ~ image : Image
+          - adminImage : ImageView
+          - btnFlower : Button
+          - btnHomepage : Button
+          - btnReturn : Button
+          - connect : Connection
+          - form : AnchorPane
+          - imgFlower : ImageView
+          - lbWelcome : Label
+          - prepare : PreparedStatement
+          - purchase_flowerID : ComboBox<Integer>
+          - purchase_form : AnchorPane
+          - purchase_quantity : Spinner<Integer>
+          - purchase_total : Label
+          - result : ResultSet
+          - spinner : SpinnerValueFactory<Integer>
+          - txtFlowerName : TextField
+          + chooseFlower()
+          + chooseQuantity()
+          + initialize()
+          + moveFlowerForm()
+          + moveHomepageForm()
+          + purchaseFlowerId()
+          + purchaseFlowerNameAndImage()
+          + purchaseSpinner()
+          + returnFlower()
+          - clear()
+      }
+    }
+  }
+  
+
+  flowermanager.controller.FlowerManagerController .up.|> javafx.fxml.Initializable
+  flowermanager.controller.HomePageController .up.|> javafx.fxml.Initializable
+  flowermanager.controller.LoginController .up.|> javafx.fxml.Initializable
+  flowermanager.controller.OrderController .up.|> javafx.fxml.Initializable
+  flowermanager.controller.ReturnFormController .up.|> javafx.fxml.Initializable
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

@@ -1,0 +1,22 @@
+<component name="libraryTable">
+  <library name="FlowerManager">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/dist/FlowerManager.jar!/" />
+      <root url="file://$PROJECT_DIR$/dist" />
+      <root url="jar://$PROJECT_DIR$/lib/byte-buddy-1.12.16.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/byte-buddy-agent-1.12.16.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/generics-resolver-3.0.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/mockito-core-4.8.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/mockito-scala-cats_2.13-1.17.14.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/mockito-scala_2.13-1.17.14.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/objenesis-3.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/scala-library-2.13.8.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/scala-parallel-collections_2.13-1.0.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/scala-reflect-2.13.8.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/scalactic_2.13-3.2.13.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+    <jarDirectory url="file://$PROJECT_DIR$/dist" recursive="false" />
+  </library>
+</component>
